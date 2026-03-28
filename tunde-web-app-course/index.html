@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 0: The Mindset & The Mission | The AI Web Engineer</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: { fontFamily: { sans: ["Montserrat", "sans-serif"] } },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-slate-950 text-slate-100 font-sans min-h-screen flex flex-col relative selection:bg-blue-500 selection:text-white overflow-y-auto hide-scrollbar"
+  >
+    <div
+      class="fixed top-0 right-0 w-[600px] h-[600px] bg-blue-900 rounded-full mix-blend-multiply filter blur-[200px] opacity-10 z-0 pointer-events-none"
+    ></div>
+
+    <main class="w-full max-w-5xl mx-auto px-6 pt-20 pb-32 z-10 relative">
+      <div
+        class="mb-24 mt-10 text-center md:text-left flex flex-col md:flex-row items-center gap-12"
+      >
+        <div class="w-full md:w-1/2">
+          <span
+            class="text-blue-400 font-bold tracking-widest uppercase text-sm mb-4 block"
+            >Module Zero</span
+          >
+          <h1
+            class="text-5xl md:text-7xl font-black text-white leading-tight mb-6"
+          >
+            The No-Code
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"
+              >Cliff</span
+            >
+          </h1>
+          <p class="text-xl text-slate-400 font-medium leading-relaxed mb-6">
+            Website builders like WordPress and Framer are amazing. But
+            eventually, you will land a high-paying client who asks for
+            something custom. A dynamic calculator, a live dashboard, a custom
+            database.
+          </p>
+          <p class="text-lg text-slate-500 leading-relaxed font-medium">
+            When you rely 100% on templates, you hit the "No-Code Cliff" and
+            lose the contract. Today, we are going to build a bridge over that
+            cliff. You are going to learn how to write actual software without a
+            computer science degree.
+          </p>
+        </div>
+        <div class="w-full md:w-1/2">
+          <img
+            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2000&auto=format&fit=crop"
+            alt="Coding IDE interface"
+            class="rounded-3xl shadow-2xl border border-slate-800 w-full h-80 object-cover opacity-90"
+          />
+        </div>
+      </div>
+
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-black text-white mb-4">Meet Our Client</h2>
+        <p class="text-xl text-slate-400 font-medium">
+          This is where the big money is made. Solving custom business logic.
+        </p>
+      </div>
+
+      <div
+        class="w-full bg-slate-900 border-2 border-slate-800 hover:border-blue-500 transition-colors duration-500 rounded-3xl p-8 md:p-12 shadow-2xl relative mb-16"
+      >
+        <div
+          class="absolute top-0 right-8 bg-blue-500 text-slate-950 font-black py-2 px-6 rounded-b-xl text-sm tracking-widest uppercase shadow-lg"
+        >
+          Live Project Brief
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-12 items-center mt-6">
+          <div class="w-full md:w-1/3 flex flex-col items-center text-center">
+            <div
+              class="w-48 h-48 rounded-full border-4 border-blue-400 mb-6 overflow-hidden bg-slate-800 relative shadow-[0_0_30px_rgba(59,130,246,0.2)]"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop"
+                alt="Mr Tunde - Logistics CEO"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <h2 class="text-4xl font-black text-white">Mr. Tunde</h2>
+            <p class="text-blue-400 font-bold text-lg mt-1">Logistics CEO</p>
+            <p class="text-slate-500 font-medium mt-2">📍 Ikeja, Lagos</p>
+          </div>
+
+          <div class="w-full md:w-2/3 space-y-8">
+            <div>
+              <h3
+                class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-2"
+              >
+                The Current Situation
+              </h3>
+              <p class="text-xl text-slate-300 font-medium leading-relaxed">
+                Mr. Tunde runs a fast-growing interstate delivery company. His
+                current website just has a WhatsApp button that says "Message us
+                for a quote."
+              </p>
+            </div>
+
+            <div>
+              <h3
+                class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-2"
+              >
+                The Problem
+              </h3>
+              <p class="text-xl text-slate-300 font-medium leading-relaxed">
+                <strong>Friction.</strong> Customers are impatient. They don't
+                want to wait 2 hours for a human to calculate their shipping
+                fee. Tunde is losing deals to bigger companies that have
+                automated instant quotes.
+              </p>
+            </div>
+
+            <div
+              class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700 border-l-4 border-l-blue-400"
+            >
+              <h3
+                class="text-sm font-bold text-blue-400 uppercase tracking-widest mb-2"
+              >
+                Our Mission Objective
+              </h3>
+              <p class="text-lg text-white font-bold">
+                We cannot use a standard website template for this. We must use
+                AI to write a custom "Shipping Calculator Web App" that uses
+                JavaScript to instantly calculate prices based on Weight and
+                City.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center border-t border-slate-800 pt-12">
+        <a
+          href="phase1.html"
+          class="group relative inline-flex items-center justify-center px-12 py-5 font-black text-slate-950 text-xl bg-blue-500 rounded-full hover:bg-blue-400 transition-all duration-300 shadow-[0_0_40px_rgba(59,130,246,0.4)] hover:shadow-[0_0_60px_rgba(59,130,246,0.7)] hover:-translate-y-1"
+        >
+          Accept Mission & Start Phase 1
+          <svg
+            class="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="3"
+              d="M14 5l7 7m0 0l-7 7m7-7H3"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </main>
+  </body>
+</html>

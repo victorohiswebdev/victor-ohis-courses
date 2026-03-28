@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phase 3: The Build | Web Masterclass</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: { fontFamily: { sans: ["Montserrat", "sans-serif"] } },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-950 text-gray-100 font-sans min-h-screen flex flex-col relative selection:bg-emerald-500 selection:text-white overflow-y-auto hide-scrollbar"
+  >
+    <div
+      class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-emerald-900 rounded-full mix-blend-multiply filter blur-[200px] opacity-20 z-0 pointer-events-none"
+    ></div>
+
+    <nav
+      class="w-full bg-gray-900/80 backdrop-blur-md border-b border-gray-800 p-4 z-50 sticky top-0 flex justify-center shadow-lg"
+    >
+      <div class="flex space-x-2 md:space-x-8 text-sm md:text-base font-bold">
+        <div class="flex items-center text-gray-400 pb-1">
+          <span
+            class="bg-emerald-900 text-emerald-400 rounded-full w-6 h-6 flex items-center justify-center mr-2"
+            >✓</span
+          >
+          The Copy
+        </div>
+        <div class="flex items-center text-gray-400 pb-1">
+          <span
+            class="bg-emerald-900 text-emerald-400 rounded-full w-6 h-6 flex items-center justify-center mr-2"
+            >✓</span
+          >
+          The Structure
+        </div>
+        <div
+          class="flex items-center text-emerald-400 border-b-2 border-emerald-400 pb-1"
+        >
+          <span
+            class="bg-emerald-500 text-gray-950 rounded-full w-6 h-6 flex items-center justify-center mr-2"
+            >3</span
+          >
+          The Build
+        </div>
+        <div class="flex items-center text-gray-600 pb-1">
+          <span
+            class="bg-gray-800 text-gray-500 rounded-full w-6 h-6 flex items-center justify-center mr-2"
+            >4</span
+          >
+          The Launch
+        </div>
+      </div>
+    </nav>
+
+    <main
+      class="flex-grow flex flex-col items-center justify-start px-6 pt-20 pb-32 z-10 relative w-full max-w-4xl mx-auto"
+    >
+      <div class="text-center mb-16">
+        <h1
+          class="text-5xl md:text-6xl font-black text-white leading-tight mb-6"
+        >
+          Pouring the Concrete: <br /><span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-500"
+            >Design Meets Copy</span
+          >
+        </h1>
+        <p
+          class="text-xl text-gray-400 font-medium leading-relaxed max-w-2xl mx-auto"
+        >
+          We have our persuasive Gemini copy. We have our four structural boxes.
+          Now, we are going to merge them together to build Aisha a digital
+          storefront that screams luxury.
+        </p>
+      </div>
+
+      <div
+        class="w-full bg-gray-900 border border-gray-800 rounded-3xl overflow-hidden shadow-2xl mb-16 group"
+      >
+        <div class="w-full h-72 md:h-96 overflow-hidden relative">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent z-10"
+          ></div>
+          <img
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2000&auto=format&fit=crop"
+            alt="Clean Web Design Workspace"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+          />
+          <h3
+            class="absolute bottom-6 left-8 z-20 text-3xl font-black text-white drop-shadow-lg"
+          >
+            Whitespace & Contrast
+          </h3>
+        </div>
+
+        <div class="p-8 md:p-12">
+          <p class="text-lg text-gray-300 leading-relaxed mb-6 font-medium">
+            The quickest way to spot an amateur website is clutter. If a website
+            looks cramped, the customer assumes the service is cheap.
+            <strong>Luxury breathes.</strong> This is the power of Whitespace.
+          </p>
+          <p class="text-lg text-gray-300 leading-relaxed font-medium">
+            As we paste our AI copy into our structural boxes, we are going to
+            use the <strong>Rule of Contrast</strong>. Dark backgrounds get
+            light text. Light backgrounds get dark text. And we will leave
+            massive padding (empty space) between every section so Aisha's
+            bridal makeup photos can shine. Let the images do the talking, and
+            the copy do the selling.
+          </p>
+        </div>
+      </div>
+
+      <div class="w-full text-left mb-8">
+        <h2 class="text-3xl font-bold text-white mb-2">The Execution</h2>
+        <p class="text-gray-400 font-medium">
+          Fleshing out the No-Code Wireframe.
+        </p>
+      </div>
+
+      <div
+        class="w-full bg-gray-900 border-2 border-teal-900/50 hover:border-emerald-500 transition-colors duration-500 rounded-3xl p-8 md:p-12 shadow-[0_0_40px_rgba(52,211,153,0.05)] relative"
+      >
+        <div
+          class="bg-gray-950 p-6 md:p-8 rounded-2xl border border-gray-800 mb-8"
+        >
+          <p
+            class="text-emerald-400 text-sm font-bold tracking-widest uppercase mb-4"
+          >
+            The Live Build Workflow
+          </p>
+          <p
+            class="font-medium text-white text-xl md:text-2xl leading-relaxed border-l-4 border-emerald-500 pl-6"
+          >
+            "We are switching back to our No-Code builder tab. We will drop our
+            Gemini text into the respective boxes, upload Aisha's premium
+            portfolio images, and stylize the fonts to look high-end and
+            elegant."
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+          <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700">
+            <span class="text-emerald-400 font-black text-xl mb-2 block"
+              >01. Inject Copy</span
+            >
+            <p class="text-sm text-gray-300 font-medium">
+              Copy the PAS text from Gemini and paste it into our Hero, Trust,
+              and Solution boxes.
+            </p>
+          </div>
+          <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700">
+            <span class="text-emerald-400 font-black text-xl mb-2 block"
+              >02. Add Visuals</span
+            >
+            <p class="text-sm text-gray-300 font-medium">
+              Set a stunning background image for the Hero section. Ensure the
+              text contrast is perfectly legible.
+            </p>
+          </div>
+          <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700">
+            <span class="text-emerald-400 font-black text-xl mb-2 block"
+              >03. Style & Space</span
+            >
+            <p class="text-sm text-gray-300 font-medium">
+              Choose an elegant Serif font for headlines. Add padding so the
+              sections can 'breathe' luxuriously.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col sm:flex-row gap-4 justify-between items-center border-t border-gray-800 pt-8"
+        >
+          <button
+            class="px-8 py-4 font-bold text-white bg-gray-800 border border-gray-600 rounded-full hover:bg-gray-700 transition-all flex items-center w-full sm:w-auto justify-center"
+          >
+            <svg
+              class="w-5 h-5 mr-3"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+              ></path>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+              ></path>
+            </svg>
+            Switch to Builder
+          </button>
+
+          <a
+            href="phase4.html"
+            class="px-10 py-4 font-black text-gray-950 bg-emerald-400 rounded-full hover:bg-emerald-300 transition-all shadow-[0_0_20px_rgba(52,211,153,0.4)] flex items-center w-full sm:w-auto justify-center"
+          >
+            Advance to Phase 4
+            <svg
+              class="w-6 h-6 ml-3"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

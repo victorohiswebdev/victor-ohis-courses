@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phase 4: The Destination | Automation Architect</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: { fontFamily: { sans: ["Montserrat", "sans-serif"] } },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-950 text-gray-100 font-sans min-h-screen flex flex-col relative selection:bg-purple-500 selection:text-white overflow-y-auto hide-scrollbar"
+  >
+    <div
+      class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-purple-900 rounded-full mix-blend-multiply filter blur-[200px] opacity-20 z-0 pointer-events-none"
+    ></div>
+
+    <nav
+      class="w-full bg-gray-900/80 backdrop-blur-md border-b border-gray-800 p-4 z-50 sticky top-0 flex justify-center shadow-lg"
+    >
+      <div
+        class="flex space-x-2 md:space-x-6 text-xs md:text-sm font-bold overflow-x-auto hide-scrollbar"
+      >
+        <div class="flex items-center text-gray-400 pb-1 whitespace-nowrap">
+          <span
+            class="bg-purple-900 text-purple-400 rounded-full w-5 h-5 md:w-6 md:h-6 flex items-center justify-center mr-2"
+            >✓</span
+          >
+          The Architecture
+        </div>
+        <div class="flex items-center text-gray-400 pb-1 whitespace-nowrap">
+          <span
+            class="bg-purple-900 text-purple-400 rounded-full w-5 h-5 md:w-6 md:h-6 flex items-center justify-center mr-2"
+            >✓</span
+          >
+          The Engine
+        </div>
+        <div class="flex items-center text-gray-400 pb-1 whitespace-nowrap">
+          <span
+            class="bg-purple-900 text-purple-400 rounded-full w-5 h-5 md:w-6 md:h-6 flex items-center justify-center mr-2"
+            >✓</span
+          >
+          The Brain
+        </div>
+        <div
+          class="flex items-center text-purple-400 border-b-2 border-purple-400 pb-1 whitespace-nowrap"
+        >
+          <span
+            class="bg-purple-500 text-gray-950 rounded-full w-5 h-5 md:w-6 md:h-6 flex items-center justify-center mr-2"
+            >4</span
+          >
+          The Destination
+        </div>
+        <div class="flex items-center text-gray-600 pb-1 whitespace-nowrap">
+          <span
+            class="bg-gray-800 text-gray-500 rounded-full w-5 h-5 md:w-6 md:h-6 flex items-center justify-center mr-2"
+            >5</span
+          >
+          The Reality
+        </div>
+      </div>
+    </nav>
+
+    <main
+      class="flex-grow flex flex-col items-center justify-start px-6 pt-20 pb-32 z-10 relative w-full max-w-4xl mx-auto"
+    >
+      <div class="text-center mb-16">
+        <h1
+          class="text-5xl md:text-6xl font-black text-white leading-tight mb-6"
+        >
+          Completing <br /><span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-fuchsia-500"
+            >The Circuit</span
+          >
+        </h1>
+        <p
+          class="text-xl text-gray-400 font-medium leading-relaxed max-w-2xl mx-auto"
+        >
+          The AI has read the email and extracted the exact data we asked for.
+          Now, we must safely transport that package into Mrs. Kemi's vault. We
+          are going to connect Notion as the final stop on our pipeline.
+        </p>
+      </div>
+
+      <div
+        class="w-full bg-gray-900 border border-gray-800 rounded-3xl overflow-hidden shadow-2xl mb-16 group"
+      >
+        <div class="w-full h-72 md:h-96 overflow-hidden relative">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent z-10"
+          ></div>
+          <img
+            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2000&auto=format&fit=crop"
+            alt="Database Servers and Connections"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+          />
+          <h3
+            class="absolute bottom-6 left-8 z-20 text-3xl font-black text-white drop-shadow-lg"
+          >
+            Data Mapping
+          </h3>
+        </div>
+
+        <div class="p-8 md:p-12">
+          <p class="text-lg text-gray-300 leading-relaxed mb-6 font-medium">
+            Think of this phase like a digital post office. The AI is holding a
+            box full of information, but it doesn't know where to put it. We use
+            a concept called <strong>Data Mapping</strong> to tell the system
+            exactly which slot each piece of data belongs in.
+          </p>
+          <p class="text-lg text-gray-300 leading-relaxed font-medium">
+            We will open the Notion module in Make.com. It will automatically
+            read the 4 columns we created in Phase 1. All we have to do is drag
+            the "Name" variable from Gemini into the "Name" column in Notion. We
+            drag the "Budget" to "Budget". It is literally drawing lines between
+            dots.
+          </p>
+        </div>
+      </div>
+
+      <div class="w-full text-left mb-8">
+        <h2 class="text-3xl font-bold text-white mb-2">The Execution</h2>
+        <p class="text-gray-400 font-medium">
+          Wiring the AI Output to the Notion Database.
+        </p>
+      </div>
+
+      <div
+        class="w-full bg-gray-900 border-2 border-purple-900/50 hover:border-purple-500 transition-colors duration-500 rounded-3xl p-8 md:p-12 shadow-[0_0_40px_rgba(168,85,247,0.05)] relative"
+      >
+        <div
+          class="bg-gray-950 p-6 md:p-8 rounded-2xl border border-gray-800 mb-8"
+        >
+          <p
+            class="text-purple-400 text-sm font-bold tracking-widest uppercase mb-4"
+          >
+            The Final Build Workflow
+          </p>
+          <p
+            class="font-medium text-white text-xl md:text-2xl leading-relaxed border-l-4 border-purple-500 pl-6 mb-4"
+          >
+            "We add our third and final bubble: Notion. We select 'Create a
+            Database Item' and select Mrs. Kemi's CRM. Now, just click into the
+            empty fields and map the AI's answers directly into them."
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+          <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700">
+            <span class="text-purple-400 font-black text-xl mb-2 block"
+              >01. Add Destination</span
+            >
+            <p class="text-sm text-gray-300 font-medium">
+              Click the plus sign next to the Gemini bubble. Search for "Notion"
+              and choose "Create a Database Item."
+            </p>
+          </div>
+          <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700">
+            <span class="text-purple-400 font-black text-xl mb-2 block"
+              >02. Select The Vault</span
+            >
+            <p class="text-sm text-gray-300 font-medium">
+              Connect your Notion account and use the search bar to find the
+              exact Database table we built back in Phase 1.
+            </p>
+          </div>
+          <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700">
+            <span class="text-purple-400 font-black text-xl mb-2 block"
+              >03. Map The Variables</span
+            >
+            <p class="text-sm text-gray-300 font-medium">
+              Click into the "Client Name" field in Make.com, and select the
+              corresponding text generated by Gemini. Repeat for Budget and
+              Summary.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col sm:flex-row gap-4 justify-between items-center border-t border-gray-800 pt-8"
+        >
+          <button
+            class="px-8 py-4 font-bold text-white bg-gray-800 border border-gray-600 rounded-full hover:bg-gray-700 transition-all flex items-center w-full sm:w-auto justify-center"
+          >
+            <svg
+              class="w-5 h-5 mr-3"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+              ></path>
+            </svg>
+            Map the Data
+          </button>
+
+          <a
+            href="phase5.html"
+            class="px-10 py-4 font-black text-gray-950 bg-purple-500 rounded-full hover:bg-purple-400 transition-all shadow-[0_0_20px_rgba(168,85,247,0.4)] flex items-center w-full sm:w-auto justify-center"
+          >
+            Advance to Phase 5
+            <svg
+              class="w-6 h-6 ml-3"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

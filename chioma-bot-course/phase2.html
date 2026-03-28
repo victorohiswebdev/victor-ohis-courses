@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phase 2: The Logic | WhatsApp AI</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: { fontFamily: { sans: ["Montserrat", "sans-serif"] } },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-950 text-gray-100 font-sans min-h-screen flex flex-col relative selection:bg-green-500 selection:text-gray-900 overflow-y-auto hide-scrollbar"
+  >
+    <div
+      class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-green-900 rounded-full mix-blend-multiply filter blur-[200px] opacity-20 z-0 pointer-events-none"
+    ></div>
+
+    <nav
+      class="w-full bg-gray-900/80 backdrop-blur-md border-b border-gray-800 p-4 z-50 sticky top-0 flex justify-center shadow-lg"
+    >
+      <div class="flex space-x-2 md:space-x-8 text-sm md:text-base font-bold">
+        <div class="flex items-center text-gray-400 pb-1">
+          <span
+            class="bg-green-900 text-green-400 rounded-full w-6 h-6 flex items-center justify-center mr-2"
+            >✓</span
+          >
+          The Brain
+        </div>
+        <div
+          class="flex items-center text-green-400 border-b-2 border-green-400 pb-1"
+        >
+          <span
+            class="bg-green-500 text-gray-950 rounded-full w-6 h-6 flex items-center justify-center mr-2"
+            >2</span
+          >
+          The Logic
+        </div>
+        <div class="flex items-center text-gray-600 pb-1">
+          <span
+            class="bg-gray-800 text-gray-500 rounded-full w-6 h-6 flex items-center justify-center mr-2"
+            >3</span
+          >
+          The Build
+        </div>
+        <div class="flex items-center text-gray-600 pb-1">
+          <span
+            class="bg-gray-800 text-gray-500 rounded-full w-6 h-6 flex items-center justify-center mr-2"
+            >4</span
+          >
+          The Reality
+        </div>
+      </div>
+    </nav>
+
+    <main
+      class="flex-grow flex flex-col items-center justify-start px-6 pt-20 pb-32 z-10 relative w-full max-w-4xl mx-auto"
+    >
+      <div class="text-center mb-16">
+        <h1
+          class="text-5xl md:text-6xl font-black text-white leading-tight mb-6"
+        >
+          The Blueprint: <br /><span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500"
+            >Mapping The Funnel</span
+          >
+        </h1>
+        <p
+          class="text-xl text-gray-400 font-medium leading-relaxed max-w-2xl mx-auto"
+        >
+          We have our AI scripts ready. But a bot without directions is just a
+          broken toy. Before we open the auto-responder app, we must map out
+          exactly how the conversation will flow so the customer never feels
+          lost.
+        </p>
+      </div>
+
+      <div
+        class="w-full bg-gray-900 border border-gray-800 rounded-3xl overflow-hidden shadow-2xl mb-16 group"
+      >
+        <div class="w-full h-72 md:h-96 overflow-hidden relative">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent z-10"
+          ></div>
+          <img
+            src="https://images.unsplash.com/photo-1507925922893-ce35afc443ae?q=80&w=2000&auto=format&fit=crop"
+            alt="Logic Nodes and Flowchart"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+          />
+          <h3
+            class="absolute bottom-6 left-8 z-20 text-3xl font-black text-white drop-shadow-lg"
+          >
+            The "IFTTT" Protocol
+          </h3>
+        </div>
+
+        <div class="p-8 md:p-12">
+          <p class="text-lg text-gray-300 leading-relaxed mb-6 font-medium">
+            Every successful bot relies on a simple programming concept:
+            <strong>If This, Then That (IFTTT)</strong>. If the customer types a
+            specific "Trigger Word", the bot sends the corresponding script.
+          </p>
+          <p class="text-lg text-gray-300 leading-relaxed font-medium">
+            But what happens if a customer ignores the menu and types a random
+            question like,
+            <em>"Do you deliver to Port Harcourt on Sundays?"</em> A bad bot
+            breaks and ignores them. A <strong>Digital-Preneur Bot</strong> uses
+            a "Fallback Mechanism." We program a Catch-All rule that politely
+            says,
+            <em
+              >"I didn't quite get that! Type 'Menu' to see options, or type
+              'Human' to speak to Chioma directly."</em
+            >
+            This ensures zero lost leads.
+          </p>
+        </div>
+      </div>
+
+      <div class="w-full text-left mb-8">
+        <h2 class="text-3xl font-bold text-white mb-2">The Execution</h2>
+        <p class="text-gray-400 font-medium">
+          Drafting the 4-Step Keyword Architecture.
+        </p>
+      </div>
+
+      <div
+        class="w-full bg-gray-900 border-2 border-green-900/50 hover:border-green-500 transition-colors duration-500 rounded-3xl p-8 md:p-12 shadow-[0_0_40px_rgba(34,197,94,0.05)] relative"
+      >
+        <div
+          class="bg-gray-950 p-6 md:p-8 rounded-2xl border border-gray-800 mb-8"
+        >
+          <p
+            class="text-green-400 text-sm font-bold tracking-widest uppercase mb-4"
+          >
+            The Logic Map
+          </p>
+          <div
+            class="font-medium text-white text-lg md:text-xl leading-relaxed space-y-4 border-l-4 border-green-500 pl-6"
+          >
+            <p>
+              <span class="text-green-400 font-black"
+                >Rule 1 (The Ad Trigger):</span
+              >
+              <br />IF message contains "saw your ad" ➡️ THEN send Bone Straight
+              Script.
+            </p>
+            <p>
+              <span class="text-green-400 font-black"
+                >Rule 2 (The Organic Trigger):</span
+              >
+              <br />IF message contains "Hello" or "Hi" ➡️ THEN send Generic
+              Menu (Reply 1, 2, 3).
+            </p>
+            <p>
+              <span class="text-green-400 font-black"
+                >Rule 3 (The Menu Selection):</span
+              >
+              <br />IF message is exactly "1" ➡️ THEN send Wigs Price List.
+            </p>
+            <p>
+              <span class="text-green-400 font-black"
+                >Rule 4 (The Fallback):</span
+              >
+              <br />IF message is anything else (*) ➡️ THEN send "I didn't get
+              that. Type 'Menu' or 'Human'."
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+          <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700">
+            <span class="text-green-400 font-black text-xl mb-2 block"
+              >01. Match Types</span
+            >
+            <p class="text-sm text-gray-300 font-medium">
+              Understand the difference between an "Exact Match" (they must type
+              exactly '1') and a "Similarity Match" (they type 'Hello Chioma').
+            </p>
+          </div>
+          <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700">
+            <span class="text-green-400 font-black text-xl mb-2 block"
+              >02. Map the Flow</span
+            >
+            <p class="text-sm text-gray-300 font-medium">
+              Write out this logic map on a piece of paper or notepad. This
+              makes building the bot 100x faster.
+            </p>
+          </div>
+          <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700">
+            <span class="text-green-400 font-black text-xl mb-2 block"
+              >03. The Safety Net</span
+            >
+            <p class="text-sm text-gray-300 font-medium">
+              Always include Rule 4 (The Fallback). It protects the business
+              owner from looking unprofessional when the bot gets confused.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col sm:flex-row gap-4 justify-between items-center border-t border-gray-800 pt-8"
+        >
+          <button
+            class="px-8 py-4 font-bold text-white bg-gray-800 border border-gray-600 rounded-full hover:bg-gray-700 transition-all flex items-center w-full sm:w-auto justify-center"
+          >
+            <svg
+              class="w-5 h-5 mr-3"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+              ></path>
+            </svg>
+            Copy Logic Map
+          </button>
+
+          <a
+            href="phase3.html"
+            class="px-10 py-4 font-black text-gray-950 bg-green-500 rounded-full hover:bg-green-400 transition-all shadow-[0_0_20px_rgba(34,197,94,0.4)] flex items-center w-full sm:w-auto justify-center"
+          >
+            Advance to Phase 3
+            <svg
+              class="w-6 h-6 ml-3"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
