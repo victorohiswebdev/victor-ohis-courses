@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Dashboard | Livefree Academy</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: { fontFamily: { sans: ["Montserrat", "sans-serif"] } },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .glass-modal {
+        background: rgba(17, 24, 39, 0.85);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-950 text-gray-100 font-sans min-h-screen flex flex-col relative selection:bg-green-500 selection:text-gray-900 overflow-y-auto hide-scrollbar"
+  >
+    <!-- Background Glows -->
+    <div
+      class="fixed top-[-10%] left-[-10%] w-[600px] h-[600px] bg-green-900 rounded-full mix-blend-multiply filter blur-[150px] opacity-10 z-0 pointer-events-none"
+    ></div>
+    <div
+      class="fixed bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-blue-900 rounded-full mix-blend-multiply filter blur-[150px] opacity-10 z-0 pointer-events-none"
+    ></div>
+
+    <main class="w-full max-w-6xl mx-auto px-6 py-20 z-10 relative">
+      <!-- Header Section -->
+      <div class="text-center mb-20">
+        <div
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gray-900/80 border border-gray-700 text-green-400 text-sm font-bold tracking-widest uppercase mb-8 shadow-lg backdrop-blur-sm"
+        >
+          <span class="relative flex h-3 w-3">
+            <span
+              class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"
+            ></span>
+            <span
+              class="relative inline-flex rounded-full h-3 w-3 bg-green-500"
+            ></span>
+          </span>
+          Livefree Academy
+        </div>
+        <h1
+          class="text-5xl md:text-7xl font-black text-white leading-tight mb-6"
+        >
+          Your Course
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500"
+            >Dashboard</span
+          >
+        </h1>
+        <p class="text-xl text-gray-400 font-medium max-w-2xl mx-auto">
+          Welcome back, student. Access all your masterclasses from one unified
+          command center.
+        </p>
+      </div>
+
+      <!-- Dynamic Course Grid -->
+      <div id="course-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- JS will populate this -->
+      </div>
+
+      <!-- Access Modal -->
+      <div id="access-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden px-6">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeModal()"></div>
+        <div class="glass-modal w-full max-w-md p-10 rounded-[2.5rem] border border-gray-800 shadow-2xl relative z-10 scale-90 opacity-0 transition-all duration-300 transform" id="modal-content">
+          <div class="text-center">
+            <div id="modal-icon" class="text-5xl mb-6">🔒</div>
+            <h3 id="modal-title" class="text-3xl font-black text-white mb-2">Locked Masterclass</h3>
+            <p class="text-gray-400 font-medium mb-8">Enter the unique passkey provided in your first live session.</p>
+            
+            <form onsubmit="verifyKey(event)" class="space-y-4">
+              <input 
+                type="text" 
+                id="passkey-input" 
+                placeholder="Enter Passkey..." 
+                class="w-full bg-gray-900 border border-gray-700 rounded-2xl py-4 px-6 text-xl font-bold text-center tracking-widest focus:border-green-500 focus:ring-1 focus:ring-green-500 outline-none transition-all placeholder:text-gray-700 uppercase"
+                autocomplete="off"
+              >
+              <button 
+                type="submit" 
+                class="w-full py-4 bg-green-500 hover:bg-green-400 text-gray-950 font-black rounded-2xl text-xl transition-all duration-300 shadow-[0_0_20px_rgba(34,197,94,0.3)]"
+              >
+                Verify & Unlock
+              </button>
+              <p id="error-msg" class="text-red-500 font-bold text-sm h-4 opacity-0 transition-opacity">Invalid Key. Please try again.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="mt-32 text-center border-t border-gray-900 pt-12">
+        <p class="text-gray-500 font-semibold tracking-wide flex items-center justify-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+          Instructed by Victor Ohis
+        </p>
+        <p class="text-gray-600 text-sm mt-4">&copy; 2026 Livefree Academy. All rights reserved.</p>
+      </footer>
+    </main>
+
+    <!-- App Scripts -->
+    <script src="config.js"></script>
+    <script>
+      let currentCourseId = null;
+
+      // Populate Grid
+      function initGrid() {
+        const grid = document.getElementById('course-grid');
+        grid.innerHTML = COURSE_CONFIG.map(course => `
+          <div
+            class="group bg-gray-900/40 backdrop-blur-xl border border-gray-800 hover:border-${course.theme}-500/50 transition-all duration-500 rounded-[2.5rem] p-8 flex flex-col shadow-2xl relative overflow-hidden"
+          >
+            <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+              <span class="text-8xl">${course.icon}</span>
+            </div>
+            <div class="mb-6">
+              <span class="text-${course.theme}-400 font-bold tracking-widest uppercase text-xs mb-2 block">${course.category}</span>
+              <h2 class="text-3xl font-black text-white leading-tight">${course.title}</h2>
+            </div>
+            <p class="text-gray-400 font-medium leading-relaxed mb-8 flex-grow">
+              ${course.description}
+            </p>
+            <button
+              onclick="handleAccess('${course.id}')"
+              class="w-full py-4 px-6 bg-${course.theme}-500 hover:bg-${course.theme}-400 text-gray-950 font-black rounded-2xl text-center transition-all duration-300 shadow-[0_0_20px_rgba(34,197,94,0.3)] group-hover:shadow-[0_0_30px_rgba(34,197,94,0.5)]"
+            >
+              Enter Masterclass
+            </button>
+          </div>
+        `).join('');
+      }
+
+      function handleAccess(id) {
+        // Check if already unlocked in this session/browser
+        const isUnlocked = localStorage.getItem(`unlocked_${id}`);
+        const course = COURSE_CONFIG.find(c => c.id === id);
+
+        if (isUnlocked === 'true') {
+          window.location.href = course.link;
+        } else {
+          openModal(course);
+        }
+      }
+
+      function openModal(course) {
+        currentCourseId = course.id;
+        const modal = document.getElementById('access-modal');
+        const content = document.getElementById('modal-content');
+        
+        document.getElementById('modal-icon').innerText = course.icon;
+        document.getElementById('modal-title').innerText = course.title;
+        document.getElementById('passkey-input').focus();
+        
+        modal.classList.remove('hidden');
+        setTimeout(() => {
+          content.classList.remove('scale-90', 'opacity-0');
+          content.classList.add('scale-100', 'opacity-100');
+        }, 10);
+      }
+
+      function closeModal() {
+        const modal = document.getElementById('access-modal');
+        const content = document.getElementById('modal-content');
+        
+        content.classList.remove('scale-100', 'opacity-100');
+        content.classList.add('scale-90', 'opacity-0');
+        
+        setTimeout(() => {
+          modal.classList.add('hidden');
+          document.getElementById('error-msg').classList.add('opacity-0');
+          document.getElementById('passkey-input').value = '';
+        }, 300);
+      }
+
+      function verifyKey(e) {
+        e.preventDefault();
+        const input = document.getElementById('passkey-input').value.trim().toUpperCase();
+        const error = document.getElementById('error-msg');
+        const course = COURSE_CONFIG.find(c => c.id === currentCourseId);
+
+        if (input === course.passkey.toUpperCase()) {
+          // Save persistence
+          localStorage.setItem(`unlocked_${course.id}`, 'true');
+          
+          // Visual Feedback
+          const btn = e.target.querySelector('button');
+          btn.innerText = 'Unlocked! Redirecting...';
+          btn.classList.replace('bg-green-500', 'bg-emerald-400');
+          
+          setTimeout(() => {
+            window.location.href = course.link;
+          }, 800);
+        } else {
+          error.classList.remove('opacity-0');
+          // Shake effect
+          const content = document.getElementById('modal-content');
+          content.classList.add('animate-bounce');
+          setTimeout(() => content.classList.remove('animate-bounce'), 500);
+        }
+      }
+
+      // Initialize on load
+      initGrid();
+    </script>
+  </body>
+</html>
