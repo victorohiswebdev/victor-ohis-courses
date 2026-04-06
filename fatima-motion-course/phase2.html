@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phase 2: The Visuals | AI Motion Architect</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: { fontFamily: { sans: ["Montserrat", "sans-serif"] } },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-950 text-gray-100 font-sans min-h-screen flex flex-col relative selection:bg-orange-500 selection:text-white overflow-y-auto hide-scrollbar"
+  >
+    <div
+      class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-orange-900 rounded-full mix-blend-multiply filter blur-[200px] opacity-20 z-0 pointer-events-none"
+    ></div>
+
+    <nav
+      class="w-full bg-gray-900/80 backdrop-blur-md border-b border-gray-800 p-4 z-50 sticky top-0 flex justify-center shadow-lg"
+    >
+      <div class="flex space-x-2 md:space-x-8 text-sm md:text-base font-bold">
+        <div class="flex items-center text-gray-400 pb-1">
+          <span
+            class="bg-orange-900 text-orange-400 rounded-full w-6 h-6 flex items-center justify-center mr-2"
+            >✓</span
+          >
+          The Audio
+        </div>
+        <div
+          class="flex items-center text-orange-400 border-b-2 border-orange-400 pb-1"
+        >
+          <span
+            class="bg-orange-500 text-gray-950 rounded-full w-6 h-6 flex items-center justify-center mr-2"
+            >2</span
+          >
+          The Visuals
+        </div>
+        <div class="flex items-center text-gray-600 pb-1">
+          <span
+            class="bg-gray-800 text-gray-500 rounded-full w-6 h-6 flex items-center justify-center mr-2"
+            >3</span
+          >
+          The Motion
+        </div>
+        <div class="flex items-center text-gray-600 pb-1">
+          <span
+            class="bg-gray-800 text-gray-500 rounded-full w-6 h-6 flex items-center justify-center mr-2"
+            >4</span
+          >
+          The Assembly
+        </div>
+      </div>
+    </nav>
+
+    <main
+      class="flex-grow flex flex-col items-center justify-start px-6 pt-20 pb-32 z-10 relative w-full max-w-4xl mx-auto"
+    >
+      <div class="text-center mb-16">
+        <h1
+          class="text-5xl md:text-6xl font-black text-white leading-tight mb-6"
+        >
+          Mastering <br /><span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-500"
+            >Character Consistency</span
+          >
+        </h1>
+        <p
+          class="text-xl text-gray-400 font-medium leading-relaxed max-w-2xl mx-auto"
+        >
+          The fastest way to ruin a motion graphic video is if your main
+          character looks like a different person in every scene. We must teach
+          the AI to lock in specific visual traits.
+        </p>
+      </div>
+
+      <div
+        class="w-full bg-gray-900 border border-gray-800 rounded-3xl overflow-hidden shadow-2xl mb-16 group"
+      >
+        <div class="w-full h-72 md:h-96 overflow-hidden relative">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent z-10"
+          ></div>
+          <img
+            src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2000&auto=format&fit=crop"
+            alt="AI Image Generation Vectors"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+          />
+          <h3
+            class="absolute bottom-6 left-8 z-20 text-3xl font-black text-white drop-shadow-lg"
+          >
+            The Anchor Prompt
+          </h3>
+        </div>
+
+        <div class="p-8 md:p-12">
+          <p class="text-lg text-gray-300 leading-relaxed mb-6 font-medium">
+            AI image generators suffer from "amnesia." Every time you hit
+            generate, they start from scratch. To prevent this, Digital-Preneurs
+            use an <strong>Anchor Prompt</strong>.
+          </p>
+          <p class="text-lg text-gray-300 leading-relaxed font-medium">
+            Instead of just saying <em>"A girl studying,"</em> and then later
+            saying <em>"A girl winning an award,"</em> we must define the exact
+            molecular makeup of the character and paste that definition into
+            <strong>every single scene prompt</strong>. We define her hair, her
+            skin tone, the style of animation, and the color palette. This
+            forces the AI to keep her consistent.
+          </p>
+        </div>
+      </div>
+
+      <div class="w-full text-left mb-8">
+        <h2 class="text-3xl font-bold text-white mb-2">The Execution</h2>
+        <p class="text-gray-400 font-medium">
+          Generating Fatima's 5 Scenes in Google AI Studio.
+        </p>
+      </div>
+
+      <div
+        class="w-full bg-gray-900 border-2 border-orange-900/50 hover:border-orange-500 transition-colors duration-500 rounded-3xl p-8 md:p-12 shadow-[0_0_40px_rgba(249,115,22,0.05)] relative"
+      >
+        <div
+          class="bg-gray-950 p-6 md:p-8 rounded-2xl border border-gray-800 mb-8"
+        >
+          <p
+            class="text-orange-400 text-sm font-bold tracking-widest uppercase mb-4"
+          >
+            The Consistent Formula
+          </p>
+          <p
+            class="font-medium text-white text-xl md:text-2xl leading-relaxed border-l-4 border-orange-500 pl-6"
+          >
+            <strong>[The Anchor]:</strong> "Flat 2D vector illustration, modern
+            corporate art style. A 20-year-old Nigerian female engineering
+            student with short natural hair, wearing a yellow safety helmet and
+            a blue denim shirt."<br /><br />
+            <strong>+ [The Action]:</strong> "...sitting at a messy desk looking
+            exhausted, alarm clock ringing."
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+          <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700">
+            <span class="text-orange-400 font-black text-xl mb-2 block"
+              >01. The Anchor</span
+            >
+            <p class="text-sm text-gray-300 font-medium">
+              Copy the Anchor text. This is the visual DNA of our "Engineering
+              Girlie." You must paste this at the beginning of all 5 scene
+              prompts.
+            </p>
+          </div>
+          <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700">
+            <span class="text-orange-400 font-black text-xl mb-2 block"
+              >02. The Action</span
+            >
+            <p class="text-sm text-gray-300 font-medium">
+              Append the specific action for the scene. (e.g., Scene 1:
+              exhausted desk. Scene 5: holding a trophy, smiling).
+            </p>
+          </div>
+          <div class="bg-gray-800/50 p-5 rounded-xl border border-gray-700">
+            <span class="text-orange-400 font-black text-xl mb-2 block"
+              >03. UI Assets</span
+            >
+            <p class="text-sm text-gray-300 font-medium">
+              Generate secondary assets like the "APWEN Resource Hub Phone
+              Mockup" and floating scholarship icons to layer over your
+              character later.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col sm:flex-row gap-4 justify-between items-center border-t border-gray-800 pt-8"
+        >
+          <button
+            class="px-8 py-4 font-bold text-white bg-gray-800 border border-gray-600 rounded-full hover:bg-gray-700 transition-all flex items-center w-full sm:w-auto justify-center"
+          >
+            <svg
+              class="w-5 h-5 mr-3"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+              ></path>
+            </svg>
+            Copy Anchor Prompt
+          </button>
+
+          <a
+            href="phase3.html"
+            class="px-10 py-4 font-black text-gray-950 bg-orange-500 rounded-full hover:bg-orange-400 transition-all shadow-[0_0_20px_rgba(249,115,22,0.4)] flex items-center w-full sm:w-auto justify-center"
+          >
+            Advance to Phase 3
+            <svg
+              class="w-6 h-6 ml-3"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
