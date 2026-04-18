@@ -10,7 +10,7 @@ const COURSE_CONFIG = [
     icon: "🤖",
     description:
       "The WhatsApp AI Automator. Turn AI into a master salesperson that closes sales on autopilot.",
-    link: "chioma-bot-course/cover.html",
+    link: "chioma-bot-course/start.html",
     passkey: "LIVEFREE-BOT",
   },
   {
@@ -21,7 +21,7 @@ const COURSE_CONFIG = [
     icon: "🎨",
     description:
       "The AI Design Masterclass. Build a commercial brand identity from zero using AI leverage.",
-    link: "chop-quick/cover.html",
+    link: "chop-quick/start.html",
     passkey: "LIVEFREE-DESIGN",
   },
   {
@@ -32,7 +32,7 @@ const COURSE_CONFIG = [
     icon: "⚙️",
     description:
       "The Zero-Cost Systems Masterclass. Build invisible robots for busy CEOs and charge retainers.",
-    link: "kemi-automation-course/cover.html",
+    link: "kemi-automation-course/start.html",
     passkey: "LIVEFREE-AUTO",
   },
   {
@@ -43,7 +43,7 @@ const COURSE_CONFIG = [
     icon: "💻",
     description:
       "The Technical Bridge Masterclass. Build custom software and interactive apps with AI.",
-    link: "tunde-web-app-course/cover.html",
+    link: "tunde-web-app-course/start.html",
     passkey: "LIVEFREE-WEB",
   },
   {
@@ -54,7 +54,7 @@ const COURSE_CONFIG = [
     icon: "🏗️",
     description:
       "The AI Web Masterclass. Build high-end booking websites using an arsenal of AI tools.",
-    link: "web-design/cover.html",
+    link: "web-design/start.html",
     passkey: "LIVEFREE-ESTATE",
   },
   {
